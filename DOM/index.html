@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+</head>
+<body>
+    <h1 id="person-name" class="title">Seu nome</h1>
+    <h2>Programador JavaScript</h2>
+
+    <p>Conhecimentos em programação Front-End e desenvolvimento de sistemas</p>
+    <p>Para mais detalhes: <a href="https://github.com/davibarbosamarques?tab=overview&from=2025-03-01&to=2025-03-24">GitHub</a></p>
+</body>
+    <script>
+    /*
+        let titleh1 = document.getElementById('person-name')
+        console.log('titleh1', titleh1)
+
+        let classh1 = document.getElementsByClassName('title')
+        console.log('classh1', classh1)
+        console.log("*", document.querySelectorAll("*"))
+        console.log(document.querySelector('#person-name'))
+    */
+    const titleh1 = document.getElementById('person-name')
+    titleh1.innerHTML = "Davi Barbosa"
+    titleh1.style.color = "red"
+
+    const subtitle = document.createElement("h2")
+    subtitle.innerHTML = "Projetos"
+
+    const list = document.createElement("ul")
+
+    const itemList1 = document.createElement("li")
+    itemList1.innerHTML = "GitHub API"
+
+    const itemList2 = document.createElement("li")
+    itemList2.innerHTML = "Portfolio"
+
+    const itemList3 = document.createElement("li")
+    itemList3.innerHTML = "eCommerce"
+
+    list.append(itemList1)
+    list.append(itemList2)
+    list.append(itemList3)
+
+    document.body.append(subtitle)
+    document.body.append(list)
+    </script>
+</html>
