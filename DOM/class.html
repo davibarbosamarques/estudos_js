@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterando Class</title>
+    <style>
+        .mudanca{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">Alterando estilos no JavaScript</h1>
+    <button id="chance-color">alterar cor</button>
+
+    <script>
+        const titulo = document.querySelector("#title")
+        const botao = document.querySelector("#chance-color")
+
+        botao.addEventListener("click", () =>{
+            if(titulo.classList.contains("mudanca")){
+                titulo.classList.remove("mudanca")
+            }else{
+                titulo.classList.add("mudanca")
+            }
+        })
+
+    </script>
+</body>
+</html>

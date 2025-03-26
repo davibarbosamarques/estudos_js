@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilos JS</title>
+</head>
+<body>
+    <h1 id="title">Alterando estilos no JavaScript</h1>
+    <button id="chance-color">alterar cor</button>
+
+    <script>
+        const titulo = document.querySelector("#title")
+        const botao = document.querySelector("#chance-color")
+
+        botao.addEventListener("click", () =>{
+            //titulo.style = "color: red"
+            titulo.style.color = "red"
+        })
+
+    </script>
+</body>
+</html>
