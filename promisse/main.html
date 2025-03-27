@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <button>Executar</button>
+
+    <script>
+
+        let cont = 0;
+        function temporizador(){
+            console.log("iniciou")
+
+            var promisecont = ++cont
+
+            new Promise((resolve, reject) => { 
+                setTimeout(() => {
+                    if(promisecont % 2 == 0){
+                        resolve(promisecont)
+                    }else{
+                        reject(promisecont)
+                    }
+                }, 1000)
+            }).then((value) => {
+                console.log(`promise = ${value}`)
+            }).catch(() =>{
+                console.error("ERRO")
+            })
+            console.log("finalizou")
+        }
+        const botao = document.querySelector("button");
+        botao.addEventListener("click", temporizador);
+    </script>
+</body>
+</html>
