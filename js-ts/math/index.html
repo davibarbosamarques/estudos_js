@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex Numbers</title>
+</head>
+<body>
+    <h1>Seu numero é <span id="numero">0</span></h1>
+
+    <script>
+        const num = Number(prompt("Digite seu número:"))
+        const numero = document.getElementById("numero")
+        numero.innerText = num
+
+        document.body.innerHTML += `<p>A raiz quadranda do número é: ${Math.sqrt(num)}</p>`;
+        document.body.innerHTML += `<p>${num} é inteiro? ${Number.isInteger(num)}</p>`
+        document.body.innerHTML += `<p>${num} é NaN? ${isNaN(num)}</p>`
+        document.body.innerHTML += `<p>Arredondando para cima: ${Math.ceil(num)}</p>`;
+        document.body.innerHTML += `<p>Arredondando para baixo: ${Math.floor(num)}</p>`;
+        document.body.innerHTML += `<p>Arredondando para o mais proximo: ${Math.round(num)}</p>`;
+        document.body.innerHTML += `<p>numero com duas casas decimais ${num.toFixed(2)}</p>`;
+    </script>
+</body>
+</html>
