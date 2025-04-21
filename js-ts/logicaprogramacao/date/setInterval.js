@@ -4,4 +4,16 @@ function mostrarHora(){
         hour12: false
     }); 
 }
-console.log(mostrarHora())
+
+
+const timer = setInterval(function () {
+    console.log(mostrarHora())
+},1000)
+
+setTimeout(function(){
+    clearInterval(timer)
+},5000)
+
+setTimeout(function(){
+    console.log("passou 8seg")
+},8000)
