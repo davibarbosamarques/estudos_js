@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herança</title>
+</head>
+<body>
+    <script>
+        class dispositivoEletronico{
+            constructor(nome){
+                this.nome = nome;
+                this.ligado = false;
+            }
+            ligar(){
+                if(this.ligado){
+                    console.log("Já Ligado")
+                    return
+                }
+                this.ligado = true;
+            }
+            desligar(){
+                if(!this.ligado){
+                    console.log("Já Desligado")
+                    return
+                }
+                this.ligado = false
+            }
+        }
+        
+        class celular extends dispositivoEletronico{
+            constructor(nome, cor, modelo){
+                super(nome)
+
+                this.cor = cor;
+                this.modelo = modelo;
+            }
+        }
+
+        const c1 = new celular("Motorola", "Azul", "Moto G70")
+        console.log(c1)
+    </script>
+</body>
+</html>

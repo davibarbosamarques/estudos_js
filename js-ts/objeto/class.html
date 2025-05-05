@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes js</title>
+</head>
+
+<body>
+    <script>
+        class Pessoa {
+            constructor(nome, sobrenome) {
+                this.nome = nome;
+                this.sobrenome = sobrenome;
+            }
+
+            falar() {
+                console.log(`${this.nome} esta falando`)
+            }
+        }
+        const p1 = new Pessoa("Davi", "Barbosa")
+        const p2 = new Pessoa("Joana", "Maria")
+        const p3 = new Pessoa("João", "Marcos")
+        const p4 = new Pessoa("Carlos", "Henrique")
+
+
+        console.log(p1)
+        console.log(p2)
+        console.log(p3)
+        console.log(p4)
+
+    </script>
+</body>
+
+</html>
